@@ -21,7 +21,11 @@
             <!-- AUDIO -->
             <div id="audio-container">
                 <div class="audio-player">
-                    <audio id="audio" src="audio/Sadotti.mp3" type="audio/mp3" controls="controls"></audio>
+                    <audio id="audio" controls="controls">
+                        <source id="mp3_src" src="audio/Sadotti.mp3" type="audio/mpeg">
+                        <source id="ogg_src" src="audio/Sadotti.ogg" type="audio/ogg">
+
+                    </audio>
                 </div>
             </div> <!-- end div audio-container -->
             <!-- TRANSCRIPTION -->
