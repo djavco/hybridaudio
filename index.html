@@ -1,78 +1,50 @@
 <!DOCTYPE HTML>
 <html>
+
     <head>
         <meta charset="UTF-8">
         <title>HYBRID AUDIO PLAYER - iMAL</title>
-
-        <!-- data-main attribute tells require.js to load
-        scripts/main.js after require.js loads. -->
-        
+        <!-- data-main attribute tells require.js to load scripts/main.js after require.js loads. -->
         <!-- [if lt IE9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><! [end if] -->
+        <link href="css/normalize.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/audio.css" rel="stylesheet" type="text/css">
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/mediaelement-and-player.min.js" type="text/javascript"></script>
+        <!-- hybrid lecture -->
         <script data-main="main" src="lib/require.js"></script>
-
-        <!-- Hybrid Video CSS -->
-        <link rel="stylesheet" type="text/css" href="css/app.css" />
-        
-
-
-        
     </head>
+
     <body>
-        <div class="title-lecture-print print-only">Hybrid Audio Player - iMAL</div>
-        
-        <!-- HEADER -->
-
-       <header>
-          <div id="header">
-            <div class="title">
-                <div class="title-HLP">HYBRID AUDIO PLAYER</div>
-                <div class="title-lecture">iMAL Workshop</div>
+        <!-- CONTENT -->
+        <div id="content">
+            <!-- AUDIO -->
+            <div id="audio-container">
+                <div class="audio-player">
+                    <audio id="audio" src="audio/Sadotti.mp3" type="audio/mp3" controls="controls"></audio>
+                </div>
+            </div> <!-- end div audio-container -->
+            <!-- TRANSCRIPTION -->
+            <div id="transcription-container">
+                <div id="transcription-line">MUDDY WATERS</div>
             </div>
-          </div>
-          
-        </header>
-
-        <nav>
-        </nav>
-
-        <article>
-          <!-- CONTENT -->
-          <div id="content">
-
-            <!-- MIDDLE COLUMN -->
-            <div id="middle-column">
-
-              <!-- VIDEO -->
-              <div id="audio-container">
-                <div id="audio-player">
-                  <audio id="audio" controls>
-                    <source id="mp3_src" src="audio/Sadotti.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                  </audio>
-                </div>
-              </div>
-
-              <!-- TRANSCRIPTION -->
-              <div id="tracnscription-container">
-                <div id="transcription-line">
-                  MUDDY WATERS
-                </div>
-
-              <!-- IMAGE -->
-              <div id="slide-container">
+            <!-- IMAGE -->
+            <div id="slide-container">
                 <img id="img" src="images/Slide001.jpg">
-              </div>
+            </div>
+    </div> <!-- end div id content -->
 
-            </div><!-- END MIDDLE COLUMN -->
-          </div><!-- END DIV CONTENT -->
+    <script>
+        $(document).ready(function() {
+            $('#audio').mediaelementplayer({
+                alwaysShowControls: true,
+                features: ['playpause','volume','progress'],
+                audioVolume: 'horizontal',
+                audioWidth: 200,
+                audioHeight: 70
+            });
+        });
+    </script>
 
-      </article>
-
-      <!-- FOOTER -->
-      <footer>
-        <div id="footer">
-
-        </div>
-      </footer>
     </body>
 </html>
