@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>HYBRID AUDIO PLAYER - iMAL</title>
+        <!-- data-main attribute tells require.js to load scripts/main.js after require.js loads. -->
+        <!-- [if lt IE9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><! [end if] -->
+        <link href="css/normalize.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/audio.css" rel="stylesheet" type="text/css">
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/mediaelement-and-player.min.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <h1><a href="index.html"><img class="fleche-back" src="img-player/fleche_gauche.png" />RETOUR</a></h1>
+        <!-- CONTENT -->
+        <div id="content">
+            <!-- AUDIO -->
+            <div id="audio-container">
+                <div class="audio-player">
+                    <audio id="audio" controls="controls">
+                        <source id="mp3_src" src="audio/mondiscophone.mp3" type="audio/mpeg">
+                        <source id="ogg_src" src="audio/Sadotti.ogg" type="audio/ogg">
+
+                    </audio>
+                </div>
+            </div> <!-- end div audio-container -->
+            <!-- IMAGE -->
+            <div id="slide-container">
+                <img id="img" src="images/bna/preview.jpg">
+            </div>
+            <!-- TRANSCRIPTION -->
+            <div id="transcription-container">
+                <div id="transcription-line">Là, un petit texte parallèle au son et à l’image… À lire en même temps, ou avant, ou après. Le texte pourrait aussi renvoyer vers un <a href="audio-sync-helene.html">autre son</a>, un autre texte, d’autres images.</div>
+            </div>
+    </div> <!-- end div id content -->
+
+    <script>
+        $(document).ready(function() {
+            $('#audio').mediaelementplayer({
+                alwaysShowControls: true,
+                features: ['playpause','volume','progress'],
+                audioVolume: 'horizontal',
+                audioWidth: 200,
+                audioHeight: 70
+            });
+        });
+    </script>
+
+    </body>
+</html>

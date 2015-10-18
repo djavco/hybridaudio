@@ -3,52 +3,38 @@
 
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>HYBRID AUDIO PLAYER - iMAL</title>
         <!-- data-main attribute tells require.js to load scripts/main.js after require.js loads. -->
         <!-- [if lt IE9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><! [end if] -->
         <link href="css/normalize.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <link href="css/audio.css" rel="stylesheet" type="text/css">
-        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
-        <script src="js/mediaelement-and-player.min.js" type="text/javascript"></script>
-        <!-- hybrid lecture -->
-        <script data-main="main" src="lib/require.js"></script>
     </head>
 
     <body>
-        <!-- CONTENT -->
-        <div id="content">
-            <!-- AUDIO -->
-            <div id="audio-container">
-                <div class="audio-player">
-                    <audio id="audio" controls="controls">
-                        <source id="mp3_src" src="audio/Sadotti.mp3" type="audio/mpeg">
-                        <source id="ogg_src" src="audio/Sadotti.ogg" type="audio/ogg">
+        <h1>Hidden<br />Histories<br />Public<br />Libraries</h1>
+    <p style="text-align: center; margin-top:10px;"><img style="width:140px; margin: 10px 0;" src="img-player/accueil_ville.png" /></p>
 
-                    </audio>
-                </div>
-            </div> <!-- end div audio-container -->
-            <!-- TRANSCRIPTION -->
-            <div id="transcription-container">
-                <div id="transcription-line">MUDDY WATERS</div>
-            </div>
-            <!-- IMAGE -->
-            <div id="slide-container">
-                <img id="img" src="images/Slide001.jpg">
-            </div>
-    </div> <!-- end div id content -->
-
-    <script>
-        $(document).ready(function() {
-            $('#audio').mediaelementplayer({
-                alwaysShowControls: true,
-                features: ['playpause','volume','progress'],
-                audioVolume: 'horizontal',
-                audioWidth: 200,
-                audioHeight: 70
-            });
-        });
-    </script>
+    <div class="toc-item">
+        <a href="histoires.html"><p>histoires</p>
+        <p style="text-align: center; margin-top: -10px;"><img style="width:180px;" src="img-player/accueil_histoires.png" /></p></a>
+    </div>
+    <div class="toc-item">
+        <a href="images.html"><p>images</p>
+        <p style="text-align: center; margin-top:10px;"><img style="width:180px;" src="img-player/accueil_images.png" /></p></a>
+    </div>
+    <div class="toc-item">
+        <a href="sons.html"><p>sons</p>
+        <p style="text-align: center; margin-top:10px;"><img style="width:180px;" src="img-player/accueil_sons.png" /></p></a>
+    </div>
+    <div class="toc-item">
+        <a href="cartes.html"><p>cartes</p>
+        <p style="text-align: center; margin:10px 20px;"><img style="width:180px;" src="img-player/accueil_cartes.png" /></p></a>
+    </div>
+    <div class="toc-item">
+        <p style="margin-bottom: 30px;"><a href="about.html">à propos</a></p>
+    </div>
 
     </body>
 </html>
