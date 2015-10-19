@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HYBRID AUDIO PLAYER - iMAL</title>
+
+        <!-- data-main attribute tells require.js to load
+        scripts/main.js after require.js loads. -->
+        
+        <!-- [if lt IE9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><! [end if] -->
+        <script data-main="main" src="lib/require.js"></script>
+
+        <!-- Hybrid Video CSS -->
+        <link rel="stylesheet" type="text/css" href="css/app.css" />
+        
+
+
+        
+    </head>
+    <body>
+        <div class="title-lecture-print print-only">Hybrid Audio Player - iMAL</div>
+        
+        <!-- HEADER -->
+
+       <header>
+          
+        </header>
+
+        <nav>
+        </nav>
+
+        <article>
+          <!-- CONTENT -->
+          <div id="content">
+
+            <!-- MIDDLE COLUMN -->
+            <div id="middle-column">
+
+              <!-- VIDEO -->
+              <div id="audio-container">
+                <div id="audio-player">
+                  <audio id="audio" controls>
+                    <source id="mp3_src" src="audio/Sadotti.mp3" type="audio/mpeg">
+                    <source id="ogg_src" src="audio/Sadotti.ogg" type="audio/ogg">
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              </div>
+
+              <!-- TRANSCRIPTION -->
+              <div id="tracnscription-container">
+                <div id="transcription-line">
+                  MUDDY WATERS
+                </div>
+
+              <!-- IMAGE -->
+              <div id="slide-container">
+                <img id="img" src="images/Slide001.jpg">
+              </div>
+
+            </div><!-- END MIDDLE COLUMN -->
+          </div><!-- END DIV CONTENT -->
+
+      </article>
+
+      <!-- FOOTER -->
+      <footer> 
+      </footer>
+    </body>
+</html>
