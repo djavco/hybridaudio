@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>HYBRID AUDIO PLAYER - iMAL</title>
+        <!-- data-main attribute tells require.js to load scripts/main.js after require.js loads. -->
+        <!-- [if lt IE9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><! [end if] -->
+        <link href="css/normalize.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="../../css/audio.css" rel="stylesheet" type="text/css">
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/mediaelement-and-player.min.js" type="text/javascript"></script>
+        
+        <!-- hybrid lecture -->
+        <script data-main="main" src="lib/require.js"></script>
+    </head>
+
+    <body>
+        <h1><a href="../../index.html"><img class="fleche-back" src="../../img-player/fleche_gauche.png" />MENU</a></h1>
+        <h1>MIEKE et LIEVEN</h1>
+        <!-- CONTENT -->
+        <div id="content">
+            <!-- TRANSCRIPTION -->
+            <div id="transcription-container">
+                <h2>"C'est quoi le temps ? Je pense que l'on doit se poser"</h2>
+                <h2>Mieke et Lieven</h2>
+                <h2>rue Ransfort</h2>
+                <h2>cafetière italienne avec réchaud, tasses, nappe et pare-vent</h2>
+                <p>C’est un ensemble pour préparer le café. Il comporte tout ce qui est nécessaire pour une pause café : la cafetière, une bouteille pour l’eau de la même contenance que la cafetière, une petite bombonne de gaz (et une de réserve, à toujours prévoir !), deux ou quatre tasses (pour inviter des amis), une nappe (toujours, c’est plus convivial et civilisé !) et un pare-vent fabriqué avec des pièces récupérées d’une armoire KewLox… On y ajoute un ouvre-boîte si on souhaite manger et un peu de détergent pour la vaisselle.</p>
+
+                <p>On avait d’abord pensé l’un et l’autre à d’autres objets, plus personnels. Et puis, on a choisi cet ensemble parce qu’il est un symbole de notre vie commune. On n’avait pas trop, ni l’un ni l’autre, dans nos familles la culture du café. On le buvait coupé avec de la chicorée ! C’est plus tard, en couple, qu’on s’est mis à aimer le bon café et, plus encore, le temps partagé autour d’un café.<p>
+
+                <p>Nous avons constitué cet ensemble au fur et à mesure de nos voyages. On trouvait toujours de la place dans la voiture pour l’emporter : un coin du coffre, une poche de valise, le sac à linge sale… C’étaient notre liberté et notre autonomie. On cherchait un bel endroit, à l’ombre et au calme, et on s'offrait ce temps de pause autour du café. On pouvait aller où les routes nous menaient, on avait toujours du café pour le partager avec les gens que nous rencontrions. Cette cafetière, c’est aussi la convivialité, la solidarité, l’ambiance particulière du camping.</p>
+
+                <p>On a toujours fait du camping. Nous avons vécu de belles rencontres, parfois très inattendues, comme dans un camping italien où tout le monde se réunissait pour jouer de la musique avec des instruments véritables ou de fortune. Voilà, c’est un symbole de notre vie, nous sommes un peu des nomades ! On a beaucoup changé de quartier, de ville, d’environnement. Mais quand on déménageait, on savait toujours où était la cafetière. On pouvait toujours faire du café même si l’électricité n’était pas encore installée ! Nous avions un seul petit problème : jusqu’il y a peu, on ne trouvait pas chez nous de joint pour ces cafetières italiennes. On en a une petite réserve !
+
+                <p>Sans cette cafetière, ça n’aurait pas été les vacances. S’arrêter pour boire le café, c’était d’ailleurs souvent une aventure. On ne s’installait pas comme ça au bord de l’autoroute ! On prenait toujours le temps de trouver un bel endroit avec un petit chemin, des arbres, de l’herbe… On se donnait rendez-vous avec des amis au camping ou sur la route. On se trouvait un point commun sur nos itinéraires, par exemple près d’une église, et on passait un temps ensemble. Nous, on apportait le café… Le temps du café, c’était spontané, mais il y avait quand même tout un rituel imposé par la technique et la nature. Si on avait fait un film sur notre pause-café, on aurait pensé que c’était un rite ! Et peut-être que ça l’est devenu… On a nos habitudes : Mieke sort le café et l’eau et moi je m’occupe d’aplanir le sol et d’installer le gaz. Et puis il y a l’odeur… L’odeur du café, c’est encore un des plaisirs de la pause ! Nous aimons particulièrement le Jacqmotte. Comme la mignonette Côte d’Or, c’est le bonheur du goût comme celui des souvenirs. Nous avons habité près de ces deux usines, on aimait respirer le café et le chocolat en rue !</p>
+            </div>
+    </div> <!-- end div id content -->
+
+    <script>
+        $(document).ready(function() {
+            $('#audio').mediaelementplayer({
+                alwaysShowControls: true,
+                features: ['playpause','volume','progress'],
+                audioVolume: 'horizontal',
+                audioWidth: 200,
+                audioHeight: 70
+            });
+        });
+    </script>
+
+    </body>
+</html>
